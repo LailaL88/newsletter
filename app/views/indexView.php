@@ -4,7 +4,8 @@ class IndexView
 {
     private $model;
         
-    public function __construct($model) {
+    public function __construct($model)
+    {
         $this->model = $model;
     }
 
