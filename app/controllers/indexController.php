@@ -2,21 +2,22 @@
 
 class IndexController
 {
-	private $model;
+    private $model;
 
-	public function __construct($model){
-		$this->model = $model;
-	}
+    public function __construct($model)
+    {
+	$this->model = $model;
+    }
 
     public function testInput($data)
-	{
-		$data = trim($data);
-		$data = stripslashes($data);
-		$data = htmlspecialchars($data);
-		return $data;
-	}
+    {
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	return $data;
+    }
 
-	private function getCheckboxErrorMessage()
+    private function getCheckboxErrorMessage()
     {
         if (empty($_POST["php-checkbox"])) {
             $this->model->checkboxErr = "You must accept the terms and conditions";
@@ -41,7 +42,7 @@ class IndexController
         }
     }
 
-	private function getPhpValidationMessages()
+    private function getPhpValidationMessages()
     {
         if ($_SERVER["REQUEST_METHOD"] == "POST") {
             $this->getEmptyEmailErrorMsg();    
@@ -50,18 +51,18 @@ class IndexController
         }
     }
 
-	public function checkIfEmailAdded()
-        {
-            if (isset($_POST["email"])) {
-                $this->model->checkEmail();
-            }
-        }
-
-	public function callFunctions()
-	{
-		$this->getPhpValidationMessages();
-		$this->model->addToDataBase();
-		$this->checkIfEmailAdded();
+    public function checkIfEmailAdded()
+    {
+	if (isset($_POST["email"])) {
+	    $this->model->checkEmail();
 	}
+    }
+
+    public function callFunctions()
+    {
+        $this->getPhpValidationMessages();
+	$this->model->addToDataBase();
+	$this->checkIfEmailAdded();
+    }
 }
 					 
