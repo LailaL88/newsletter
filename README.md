@@ -23,6 +23,6 @@ ex: 127.0.0.1 mycompany.test. Also make sure that you especify that in the vhost
 
 3. Open the project in Visual Studio code or other text editor. You should have SASS Compiler extension installed. If you don't have - go to extensions, search for SASS compiler and install this extension, restart Visual Studio Code. After that you should see the Watch SASS button in the bottom bar, click it. It should generate the styles.css file in the "styles" folder.
 
-After doing the above type the address of the project in the browser adderess bar, if the project doesn't open add "/index.php?page=index" to the url. To view submitted emails page add "/index.php?page=result" to the base address.
+After doing the above type the address of the project in the browser adderess bar, add "/index.php?page=index" to the url. To view submitted emails page add "/index.php?page=result" to the base address. To make the project open at once without adding "/index.php?page=index" to the address you can create .htaccess file next to index.php and add "DirectoryIndex index.php?page=index" line to it.
 
 *To make the project connect to the database, make sure that the username and password in indexModel.php line 16 and line 26 PDO statements and resultModel.php line 17, line 24 and line 48 PDO statements are the same as in C:\xampp\phpMyAdmin\config.inc.php*
