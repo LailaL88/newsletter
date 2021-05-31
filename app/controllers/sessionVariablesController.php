@@ -1,6 +1,8 @@
 <?php
 
-class VariablesController extends ResultController
+namespace SubmittedEmails;
+
+class VariablesController extends Controller
 {
     public function getProviderVariable()
     {

@@ -1,18 +1,18 @@
 <?php
 
-require_once("./app/views/indexView.php");
-require_once("./app/models/indexModel.php");
-require_once("./app/controllers/indexController.php");
-require_once('./app/models/resultModel.php');
-require_once('./app/controllers/resultController.php');
-require_once('./app/views/resultView.php');
+require_once("./app/views/frontPageView.php");
+require_once("./app/models/frontPageModel.php");
+require_once("./app/controllers/frontPageController.php");
+require_once('./app/models/emailsModel.php');
+require_once('./app/controllers/emailsController.php');
+require_once('./app/views/emailsView.php');
 
 $page = $_GET["page"];
 if (!empty($page)) {
 
     $data = array(
-        'index' => array('model' => 'IndexModel', 'view' => 'IndexView', 'controller' => 'IndexController'),
-        'result' => array('model' => 'ResultModel', 'view' => 'ResultView', 'controller' => 'ResultController')
+        'index' => array('model' => 'FrontPage\Model', 'view' => 'FrontPage\View', 'controller' => 'FrontPage\Controller'),
+        'result' => array('model' => 'SubmittedEmails\Model', 'view' => 'SubmittedEmails\View', 'controller' => 'SubmittedEmails\Controller')
     );
 
     foreach($data as $key => $components){
