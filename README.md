@@ -25,4 +25,4 @@ ex: 127.0.0.1 mycompany.test. Also make sure that you especify that in the vhost
 
 After doing the above type the address of the project in the browser adderess bar, add "/index.php?page=index" to the url. To view submitted emails page add "/index.php?page=result" to the base address. To make the project open at once without adding "/index.php?page=index" to the address you can create .htaccess file next to index.php and add "DirectoryIndex index.php?page=index" line to it.
 
-*To make the project connect to the database, make sure that the username and password in indexModel.php line 16 and line 26 PDO statements and resultModel.php line 17, line 24 and line 48 PDO statements are the same as in C:\xampp\phpMyAdmin\config.inc.php*
+*To make the project connect to the database, make sure that the username and password in indexModel.php line 16 and line 26 PDO statements and emailstModel.php line 21, line 28 and line 52 PDO statements are the same as in C:\xampp\phpMyAdmin\config.inc.php*
